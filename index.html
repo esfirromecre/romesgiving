@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROMEsgiving 2026 | ROME Real Estate Group</title>
+<meta property="og:title" content="You're invited to ROMEsgiving">
+<meta property="og:description" content="ROME team Thanksgiving lunch. Wed, Nov 25 at 3 PM. RSVP by Fri, Nov 20.">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#f4efe6;--ink:#0e0e0d;--gold:#c89848;--gold2:#7a5f33;--pumpkin:#c2642b;--muted:#77736b;--card:#fff;--line:#e4dccd}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:Geist,Inter,system-ui,sans-serif;line-height:1.5}
+  .hero{background:#0e0e0d;color:#fff;text-align:center;padding:40px 20px 84px;position:relative;overflow:hidden;border-bottom:4px solid var(--gold)}
+  .hero svg.bg{position:absolute;inset:0;width:100%;height:100%;opacity:.10;pointer-events:none}
+  .logo{display:inline-block;font-family:"Cinzel",serif;color:var(--gold);line-height:1}
+  .logo .r{font-size:34px;font-weight:700;letter-spacing:.06em;display:block}
+  .logo .g{font-size:10.5px;letter-spacing:.32em;display:block;margin-top:4px}
+  h1{font-weight:800;font-size:clamp(46px,9vw,88px);margin:26px 0 4px;line-height:1;letter-spacing:-.02em}
+  h1 .rome{color:var(--gold)}
+  .eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:13px;font-weight:600;color:var(--gold)}
+  .tag{font-size:17px;color:#d6d2c9;max-width:540px;margin:14px auto 0}
+  .icons{display:flex;justify-content:center;gap:22px;margin-top:22px}
+  .icons svg{width:34px;height:34px}
+  .wrap{max-width:760px;margin:-48px auto 60px;padding:0 16px;position:relative}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:26px;box-shadow:0 8px 24px rgba(14,14,13,.07);margin-bottom:20px}
+  .details{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center}
+  .details div{padding:6px}
+  .details>div+div{border-left:1px solid var(--line)}
+  .details .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);font-weight:700}
+  .details .v{font-size:21px;font-weight:700;margin-top:4px}
+  .details .s{font-size:13px;color:var(--muted)}
+  @media(max-width:600px){.details{grid-template-columns:1fr}.details>div+div{border-left:0;border-top:1px solid var(--line)}}
+  h2{font-size:24px;font-weight:800;margin:0 0 6px;display:flex;align-items:center;gap:10px}
+  h2::before{content:"";width:6px;height:22px;background:var(--gold);border-radius:2px}
+  .sub{color:var(--muted);margin:0 0 18px;font-size:15px}
+  label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+  input,textarea,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+  input:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+  textarea{min-height:70px;resize:vertical}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:600px){.row{grid-template-columns:1fr}}
+  .choices{display:flex;gap:10px;flex-wrap:wrap}
+  .choices button{flex:1;min-width:120px;padding:12px;border-radius:8px;border:2px solid var(--line);background:#fff;font:inherit;font-weight:600;cursor:pointer;color:var(--ink)}
+  .choices button.on{border-color:var(--ink);background:var(--ink);color:var(--gold)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips label{margin:0;font-weight:500;display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:6px;padding:6px 12px;background:#fff;cursor:pointer;font-size:14px}
+  .chips input{width:auto;margin:0;accent-color:var(--gold2)}
+  .btn{margin-top:20px;width:100%;padding:14px;border:0;border-radius:8px;background:var(--ink);color:var(--gold);font:inherit;font-weight:700;font-size:16px;letter-spacing:.04em;cursor:pointer}
+  .btn:hover{background:#26241f}
+  .btn:disabled{opacity:.6;cursor:default}
+  .msg{margin-top:12px;font-size:14px;text-align:center;min-height:20px}
+  .msg.ok{color:#4f6b2c} .msg.err{color:#a2261a}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center}
+  .stat{background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:14px 8px}
+  .stat .n{font-size:34px;font-weight:800;color:var(--gold2)}
+  .stat .l{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600}
+  table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+  th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+  .pill{display:inline-block;padding:2px 9px;border-radius:4px;font-size:12px;font-weight:700}
+  .yes{background:#e3ead3;color:#3f4a22}.no{background:#eee9e1;color:#77736b}.maybe{background:#f4e6c8;color:#7a5f33}
+  .shop li{margin:4px 0}
+  .hidden{display:none}
+  .note{font-size:13px;color:var(--muted);text-align:center}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:10px 0 30px}
+  footer .logo .r{font-size:20px}footer .logo .g{font-size:8px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logo"><span class="r">ROME</span><span class="g">REAL ESTATE GROUP</span></div>
+  <h1><span class="rome">ROME</span>sgiving</h1>
+  <div class="eyebrow">Team Thanksgiving Lunch · 2026</div>
+  <p class="tag">Thank you for a great year. Join the ROME team for turkey, all the sides and a lot to be thankful for. Significant others and kids are welcome.</p>
+  <div class="icons" aria-hidden="true">
+    <svg viewBox="0 0 40 40" fill="none" stroke="#c89848" stroke-width="1.8" stroke-linecap="round"><path d="M20 36V8"/><path d="M20 12c-4-1-6-4-6-7 4 1 6 4 6 7zM20 12c4-1 6-4 6-7-4 1-6 4-6 7zM20 19c-4-1-6-4-6-7 4 1 6 4 6 7zM20 19c4-1 6-4 6-7-4 1-6 4-6 7zM20 26c-4-1-6-4-6-7 4 1 6 4 6 7zM20 26c4-1 6-4 6-7-4 1-6 4-6 7z"/></svg>
+    <svg viewBox="0 0 40 40" fill="none" stroke="#c89848" stroke-width="1.8" stroke-linecap="round"><path d="M20 12c-9 0-14 5-14 12s5 11 14 11 14-4 14-11-5-12-14-12z"/><path d="M20 12c-4 0-6 6-6 12s2 11 6 11 6-5 6-11-2-12-6-12z"/><path d="M20 12V6c2 0 4 1 5 3"/></svg>
+    <svg viewBox="0 0 40 40" fill="none" stroke="#c89848" stroke-width="1.8" stroke-linejoin="round"><path d="M20 4l4 8 7-3-2 8 7 3-7 4 3 7-8-2-4 7-4-7-8 2 3-7-7-4 7-3-2-8 7 3z"/><path d="M20 22v14"/></svg>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card">
+    <div class="details">
+      <div><div class="k">When</div><div class="v">Wed, Nov 25</div><div class="s">3:00 PM</div></div>
+      <div><div class="k">Where</div><div class="v">Andy's House</div><div class="s"><a href="https://www.google.com/maps/search/?api=1&query=1619+La+Playa+Way+Sacramento+CA" style="color:var(--gold2)">1619 La Playa Way<br>Sacramento, CA</a></div></div>
+      <div><div class="k">Food &amp; Drinks</div><div class="v">On ROME</div><div class="s">Food, wine and beer covered</div></div>
+    </div>
+  </section>
+
+  <section class="card" id="rsvpCard">
+    <h2>RSVP</h2>
+    <p class="sub">Please RSVP by <strong>Friday, Nov 20</strong> so we get the right amount of food and drinks.</p>
+    <form id="form" novalidate>
+      <label for="name">Your name</label>
+      <input id="name" maxlength="80" required placeholder="First and last name">
+
+      <label>Will you be there?</label>
+      <div class="choices" id="attend">
+        <button type="button" data-v="yes">Yes, I'll be there</button>
+        <button type="button" data-v="maybe">Maybe</button>
+        <button type="button" data-v="no">Can't make it</button>
+      </div>
+
+      <div id="more">
+        <div class="row">
+          <div><label for="adults">Adults (you + significant other)</label><input id="adults" type="number" min="0" max="10" value="1"></div>
+          <div><label for="kids">Kids</label><input id="kids" type="number" min="0" max="10" value="0"></div>
+        </div>
+
+        <label>Dietary needs</label>
+        <div class="chips" id="diet">
+          <label><input type="checkbox" value="Vegetarian">Vegetarian</label>
+          <label><input type="checkbox" value="Vegan">Vegan</label>
+          <label><input type="checkbox" value="Gluten-free">Gluten-free</label>
+          <label><input type="checkbox" value="Dairy-free">Dairy-free</label>
+          <label><input type="checkbox" value="No pork">No pork</label>
+          <label><input type="checkbox" value="Nut allergy">Nut allergy</label>
+        </div>
+
+        <label>Drinks you'd like</label>
+        <div class="chips" id="drinks">
+          <label><input type="checkbox" value="Wine">Wine</label>
+          <label><input type="checkbox" value="Beer">Beer</label>
+          <label><input type="checkbox" value="Soda">Soda</label>
+          <label><input type="checkbox" value="Sparkling water">Sparkling water</label>
+          <label><input type="checkbox" value="Coffee">Coffee</label>
+        </div>
+      </div>
+
+      <label for="notes">Anything else? (allergies, questions)</label>
+      <textarea id="notes" maxlength="400"></textarea>
+
+      <button class="btn" id="submit" type="submit">Send RSVP</button>
+      <div class="msg" id="msg"></div>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Who's coming</h2>
+    <p class="sub" id="countLine">Loading RSVPs...</p>
+    <div class="stats">
+      <div class="stat"><div class="n" id="sHead">0</div><div class="l">Headcount</div></div>
+      <div class="stat"><div class="n" id="sMaybe">0</div><div class="l">Maybe</div></div>
+      <div class="stat"><div class="n" id="sNo">0</div><div class="l">Can't make it</div></div>
+    </div>
+    <table id="list"><thead><tr><th>Name</th><th>RSVP</th><th>Party</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <section class="card hidden" id="planner">
+    <h2>Food &amp; drink planner</h2>
+    <p class="sub">Unlisted view (#planner). Based on "Yes" headcount plus half of "Maybe".</p>
+    <ul class="shop" id="shop"></ul>
+    <h2 style="font-size:20px;margin-top:18px">Dietary &amp; notes</h2>
+    <table id="dietTbl"><thead><tr><th>Name</th><th>Dietary</th><th>Drinks</th><th>Notes</th></tr></thead><tbody></tbody></table>
+  </section>
+
+  <footer><div class="logo"><span class="r">ROME</span><span class="g">REAL ESTATE GROUP</span></div><div style="margin-top:10px">Questions? Contact Esfir Yevtushenko · 916-812-8471</div></footer>
+</main>
+
+<script>
+(function(){
+  const BASE='https://firestore.googleapis.com/v1/projects/rome-pm-calendar/databases/(default)/documents/romesgiving_rsvps';
+  const $ = id => document.getElementById(id);
+  let attend=null, rows=[];
+  const canPlan = location.hash==='#planner';
+  if(canPlan) $('planner').classList.remove('hidden');
+  let myId=null; try{ myId=localStorage.getItem('romesgiving_id'); }catch(e){}
+  if(!myId){ myId='r'+Date.now().toString(36)+Math.random().toString(36).slice(2,8); try{localStorage.setItem('romesgiving_id',myId);}catch(e){} }
+
+  document.querySelectorAll('#attend button').forEach(b => b.addEventListener('click', () => setAttend(b.dataset.v)));
+  function setAttend(v){ attend=v; document.querySelectorAll('#attend button').forEach(x=>x.classList.toggle('on',x.dataset.v===v)); $('more').classList.toggle('hidden',v==='no'); }
+  const checked = id => [...document.querySelectorAll('#'+id+' input:checked')].map(i=>i.value);
+  const setChecked = (id,vals) => document.querySelectorAll('#'+id+' input').forEach(i=>i.checked=(vals||[]).includes(i.value));
+  const num = (v,max) => Math.max(0,Math.min(max,parseInt(v,10)||0));
+  function msg(t,cls){ const m=$('msg'); m.textContent=t; m.className='msg '+(cls||''); }
+  function esc(s){ const d=document.createElement('div'); d.textContent=s==null?'':String(s); return d.innerHTML; }
+
+  // Firestore value encode/decode
+  const enc = v => Array.isArray(v) ? {arrayValue:{values:v.map(x=>({stringValue:String(x)}))}} : typeof v==='number' ? {integerValue:String(v)} : {stringValue:String(v)};
+  const dec = f => { const o={}; for(const k in f){ const x=f[k]; o[k]= 'integerValue' in x ? +x.integerValue : 'arrayValue' in x ? (x.arrayValue.values||[]).map(y=>y.stringValue) : x.stringValue; } return o; };
+
+  async function load(first){
+    try{
+      let all=[], tok='';
+      do{ const r=await fetch(BASE+'?pageSize=300'+(tok?'&pageToken='+encodeURIComponent(tok):'')); if(!r.ok) throw 0; const j=await r.json(); all=all.concat(j.documents||[]); tok=j.nextPageToken||''; }while(tok);
+      rows = all.map(d=>({id:d.name.split('/').pop(), ...dec(d.fields||{})}));
+      if(first){
+        const mine=rows.find(r=>r.id===myId);
+        if(mine){ $('name').value=mine.name||''; setAttend(mine.attend); $('adults').value=mine.adults??1; $('kids').value=mine.kids??0; setChecked('diet',mine.diet); setChecked('drinks',mine.drinks); $('notes').value=mine.notes||''; $('submit').textContent='Update RSVP'; }
+      }
+      render();
+    }catch(e){ $('countLine').textContent='Could not load RSVPs. Refresh to try again.'; }
+  }
+  load(true); setInterval(()=>load(false),20000);
+
+  $('form').addEventListener('submit', async e=>{
+    e.preventDefault();
+    const name=$('name').value.trim();
+    if(!name) return msg('Please add your name.','err');
+    if(!attend) return msg('Please pick Yes, Maybe or No.','err');
+    const data={ name, attend,
+      adults: attend==='no'?0:num($('adults').value,10), kids: attend==='no'?0:num($('kids').value,10),
+      diet: attend==='no'?[]:checked('diet'), drinks: attend==='no'?[]:checked('drinks'),
+      notes: $('notes').value.trim().slice(0,400), updatedAt:new Date().toISOString() };
+    if(attend!=='no' && data.adults+data.kids===0) data.adults=1;
+    const fields={}; for(const k in data) fields[k]=enc(data[k]);
+    $('submit').disabled=true; msg('Saving...');
+    try{
+      const r=await fetch(BASE+'/'+myId,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({fields})});
+      if(!r.ok) throw 0;
+      msg(attend==='no'?"Thanks for letting us know. We'll miss you!":"You're on the list. See you there!",'ok');
+      $('submit').textContent='Update RSVP'; load(false);
+    }catch(err){ msg("Couldn't save your RSVP. Please email esfir@romecre.com.",'err'); }
+    finally{ $('submit').disabled=false; }
+  });
+
+  function render(){
+    const yes=rows.filter(r=>r.attend==='yes'), maybe=rows.filter(r=>r.attend==='maybe'), no=rows.filter(r=>r.attend==='no');
+    const sum=(arr,k)=>arr.reduce((a,r)=>a+(r[k]||0),0);
+    const yA=sum(yes,'adults'), yK=sum(yes,'kids'), mA=sum(maybe,'adults'), mK=sum(maybe,'kids');
+    $('sHead').textContent=yA+yK; $('sMaybe').textContent=mA+mK; $('sNo').textContent=no.length;
+    $('countLine').textContent = rows.length ? rows.length+' RSVP'+(rows.length>1?'s':'')+' so far: '+yA+' adults and '+yK+' kids confirmed.' : 'No RSVPs yet. Be the first!';
+    const order={yes:0,maybe:1,no:2};
+    const sorted=[...rows].sort((a,b)=>(order[a.attend]-order[b.attend])||(a.name||'').localeCompare(b.name||''));
+    $('list').querySelector('tbody').innerHTML = sorted.map(r=>{
+      const party = r.attend==='no' ? '' : (r.adults||0)+' adult'+((r.adults||0)===1?'':'s')+(r.kids?', '+r.kids+' kid'+(r.kids===1?'':'s'):'');
+      const lbl={yes:'Yes',maybe:'Maybe',no:'No'}[r.attend]||'';
+      return '<tr><td>'+esc(r.name)+'</td><td><span class="pill '+esc(r.attend)+'">'+lbl+'</span></td><td>'+esc(party)+'</td></tr>';
+    }).join('');
+    if(!canPlan) return;
+    const adults=yA+Math.ceil(mA/2), kids=yK+Math.ceil(mK/2), people=adults+kids, eq=adults+kids*0.5;
+    const count=(arr,k,v)=>arr.filter(r=>(r[k]||[]).includes(v)).reduce((a,r)=>a+(r.adults||0),0);
+    const going=[...yes,...maybe];
+    const wine=count(going,'drinks','Wine'), beer=count(going,'drinks','Beer');
+    const veg=going.filter(r=>(r.diet||[]).some(d=>d==='Vegetarian'||d==='Vegan')).reduce((a,r)=>a+(r.adults||0)+(r.kids||0),0);
+    const lines=[
+      '<strong>Plan for '+people+' people</strong> ('+adults+' adults, '+kids+' kids)',
+      'Turkey (whole, bone-in): ~'+Math.ceil(eq*1.5)+' lbs (1.5 lb per adult, leftovers included)',
+      'Ham (optional 2nd main): ~'+Math.ceil(eq*0.5)+' lbs',
+      'Mashed potatoes: ~'+Math.ceil(eq*0.5)+' lbs raw potatoes',
+      'Stuffing, green beans, mac &amp; cheese, salad: about '+Math.ceil(eq*0.5)+' cups each',
+      'Gravy: ~'+Math.ceil(eq/3)+' cups · Cranberry sauce: ~'+Math.ceil(eq/8)+' cans',
+      'Rolls: '+Math.ceil(people*1.5)+' · Pies: '+Math.ceil(people/7)+' (8 slices each)',
+      'Wine: '+Math.ceil(wine*0.5)+' bottles ('+wine+' wine drinkers, ~2.5 glasses each)',
+      'Beer: '+(beer*2)+' cans ('+beer+' beer drinkers, 2 each)',
+      'Soda / sparkling water: '+(people*2)+' cans · Bottled water: '+people+' · Ice: '+Math.ceil(people/5)+' bags (10 lb)',
+      'Plates, napkins, cups, utensils: '+Math.ceil(people*1.5)+' sets (extra for dessert)',
+      veg?'Vegetarian/vegan guests: '+veg+' (plan a meatless main)':''
+    ].filter(Boolean);
+    $('shop').innerHTML=lines.map(l=>'<li>'+l+'</li>').join('');
+    const special=sorted.filter(r=>r.attend!=='no'&&((r.diet||[]).length||(r.drinks||[]).length||r.notes));
+    $('dietTbl').querySelector('tbody').innerHTML = special.length ? special.map(r=>'<tr><td>'+esc(r.name)+'</td><td>'+esc((r.diet||[]).join(', '))+'</td><td>'+esc((r.drinks||[]).join(', '))+'</td><td>'+esc(r.notes)+'</td></tr>').join('') : '<tr><td colspan="4" class="note">Nothing yet</td></tr>';
+  }
+})();
+</script>
+</body>
+</html>
